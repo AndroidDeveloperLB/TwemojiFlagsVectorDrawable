@@ -24,7 +24,7 @@ open class TwemojiFlagEditText : AppCompatEditText {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
                 if (isProcessing || s == null) return
-                val processed = TwemojiUtils.process(context, s,  paint.textSize)
+                val processed = TwemojiFlagUtils.process(context, s,  paint.textSize)
                 if (processed != null) {
                     isProcessing = true
                     val selectionStart = selectionStart

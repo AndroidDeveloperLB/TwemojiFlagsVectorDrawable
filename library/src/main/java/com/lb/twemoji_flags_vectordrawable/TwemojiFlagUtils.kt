@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import java.util.Locale
 import kotlin.math.roundToInt
 
-object TwemojiUtils {
+object TwemojiFlagUtils {
 
     /**
      * Processes the text to replace country code regional indicators with Twemoji drawables.
