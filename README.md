@@ -10,7 +10,10 @@ Best I've found for this is the old [twemoji-colr](https://github.com/mozilla/tw
 So, what I did is to import the flags-emoji SVG files from the official repository, optimize  (using [this website](https://devina.io/svg-minifier)) , convert them to VectorDrawable of Android using Android Studio, optimize again (using [this plugin](https://github.com/Miha-x64/Mikes_IDEA_extensions)), and replace each flag emoji in the text during runtime using a helper class. 
 
 ## How to use the library
-Either use the `TwemojiFlagUtils.process` function to convert the text to one that will show the emoji flags, or use one of the common classes I've made that do it for you: 
+Dependency can be added using Jitpack:
+https://jitpack.io/#AndroidDeveloperLB/TwemojiFlagsVectorDrawable
+
+Then, either use the `TwemojiFlagUtils.process` function to convert the text to one that will show the emoji flags, or use one of the common classes I've made that do it for you: 
 - TwemojiFlagTextView
 - TwemojiFlagButton
 - TwemojiFlagEditText
