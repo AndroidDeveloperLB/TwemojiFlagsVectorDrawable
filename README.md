@@ -20,6 +20,7 @@ Then, either use the `TwemojiFlagUtils.process` function to convert the text to 
 - TwemojiFlagTextInputEditText
 
 You can also check their code in case you want to create something similar.
+And, if you want to use ImageView or do something with the image itself, check out the various functions of `TwemojiFlagUtils` for your needs
 
 ## How to get up-to-date with newest flags emojis
 Here's how to get newest flags, in case this repository seems outdated compared to what's on Twemoji repository:
