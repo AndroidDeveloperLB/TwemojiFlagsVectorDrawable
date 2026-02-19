@@ -2,10 +2,8 @@ package com.lb.twemoji_flags_vectordrawable
 
 import android.content.Context
 import android.text.Editable
-import android.text.Selection.setSelection
 import android.text.TextWatcher
 import android.util.AttributeSet
-import androidx.appcompat.widget.AppCompatEditText
 import com.google.android.material.textfield.TextInputEditText
 
 open class TwemojiFlagTextInputEditText : TextInputEditText {
@@ -26,10 +24,7 @@ open class TwemojiFlagTextInputEditText : TextInputEditText {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
                 if (isProcessing || s == null) return
-
-                val size = paint.textSize.toInt()
-                val processed = TwemojiUtils.process(context, s, size)
-
+                val processed = TwemojiUtils.process(context, s,  paint.textSize)
                 if (processed != null) {
                     isProcessing = true
                     val selectionStart = selectionStart

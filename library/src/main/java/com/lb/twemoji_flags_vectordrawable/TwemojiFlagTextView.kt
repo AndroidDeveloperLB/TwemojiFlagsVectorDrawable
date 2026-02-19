@@ -32,9 +32,8 @@ open class TwemojiFlagTextView : MaterialTextView {
 
     private fun updateText() {
         val text = originalText ?: return
-        val size = paint.textSize.toInt()
         isProcessing = true
-        val processed = TwemojiUtils.process(context, text, size)
+        val processed = TwemojiUtils.process(context, text, paint.textSize)
         super.setText(processed, BufferType.SPANNABLE)
         isProcessing = false
     }

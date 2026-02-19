@@ -4,15 +4,24 @@ import android.content.Context
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.ImageSpan
-import android.util.Log
 import androidx.core.content.ContextCompat
 import java.util.Locale
+import kotlin.math.roundToInt
 
 object TwemojiUtils {
 
-    fun process(context: Context, text: CharSequence?, size: Int): Spannable? {
+    /**
+     * Processes the text to replace country code regional indicators with Twemoji drawables.
+     *
+     * @param size The size in pixels (Float) to match the text size.
+     */
+    fun process(context: Context, text: CharSequence?, size: Float): Spannable? {
         if (text == null) return null
         val builder = SpannableStringBuilder(text)
+
+        // Round the float size to the nearest integer pixel for drawing bounds
+        val iconSize = size.roundToInt()
+
         var i = 0
         while (i < builder.length - 1) {
             val c1 = builder[i]
@@ -32,13 +41,13 @@ object TwemojiUtils {
                         if (resId != 0) {
                             val drawable = try {
                                 ContextCompat.getDrawable(context, resId)
-                            }catch (e: Exception){
-//                                Log.d("AppLog", "failed to get drawable of $countryCode text:$text")
+                            } catch (e: Exception) {
                                 e.printStackTrace()
                                 null
                             }
                             if (drawable != null) {
-                                drawable.setBounds(0, 0, size, size)
+                                // Use the rounded iconSize
+                                drawable.setBounds(0, 0, iconSize, iconSize)
                                 val span = ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM)
                                 builder.setSpan(span, i, i + 4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                             }
