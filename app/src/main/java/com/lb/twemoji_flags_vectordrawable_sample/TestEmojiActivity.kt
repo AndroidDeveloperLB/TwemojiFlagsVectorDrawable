@@ -6,13 +6,9 @@ import android.text.TextWatcher
 import android.widget.SeekBar
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updatePadding
 import com.lb.common_utils.BoundActivity
-import com.lb.twemoji_flags_vectordrawable_sample.databinding.ActivityMainBinding
-import com.lb.twemoji_flags_vectordrawable_sample.databinding.ActivityMainBinding.inflate
 import com.lb.twemoji_flags_vectordrawable_sample.databinding.ActivityTestEmojiBinding
 
 class TestEmojiActivity :

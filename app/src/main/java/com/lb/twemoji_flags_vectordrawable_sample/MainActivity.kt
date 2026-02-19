@@ -4,26 +4,18 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.content.ContextCompat.startActivity
 import androidx.core.net.toUri
 import androidx.core.view.MenuProvider
 import androidx.core.view.ViewCompat
-import androidx.core.view.WindowCompat.enableEdgeToEdge
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.setPadding
-import androidx.core.view.updatePadding
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.lb.common_utils.BoundActivity
 import com.lb.twemoji_flags_vectordrawable_sample.databinding.ActivityMainBinding
 
@@ -94,7 +86,7 @@ class MainActivity  : BoundActivity<ActivityMainBinding>(ActivityMainBinding::in
         allCountries = CountryRepository.getAllCountries()
         adapter = CountryAdapter(allCountries) { country ->
             copyToClipboard(country.flagEmoji)
-            Toast.makeText(this, "Copied: ${country.flagEmoji}", Toast.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, "Copied: ${country.flagEmoji}", Snackbar.LENGTH_SHORT).show()
         }
         binding.recyclerView.adapter = adapter
     }

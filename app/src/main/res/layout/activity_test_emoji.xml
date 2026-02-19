@@ -60,6 +60,7 @@
                 android:textAppearance="?attr/textAppearanceSubtitle2" />
 
             <com.lb.twemoji_flags_vectordrawable.TwemojiFlagTextView
+                android:textColor="?attr/colorOnSurface"
                 android:id="@+id/twemoji_text_view" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:layout_marginTop="8dp"
                 android:gravity="center" android:textSize="24sp" tools:text="123"

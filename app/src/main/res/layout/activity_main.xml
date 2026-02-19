@@ -10,15 +10,18 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar" android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" app:titleTextColor="#fff" />
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            app:materialThemeOverlay="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" app:titleTextColor="#fff" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" android:orientation="vertical"
-        android:id="@+id/recycler_view" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:clipToPadding="false"
-        android:scrollbars="vertical" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:clipToPadding="false" android:orientation="vertical"
+        android:scrollbars="vertical" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/item_country" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

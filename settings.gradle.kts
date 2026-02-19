@@ -23,6 +23,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Twemoji VectorDrawable"
+rootProject.name = "Twemoji flags VectorDrawable"
 include(":app")
 include(":library")
