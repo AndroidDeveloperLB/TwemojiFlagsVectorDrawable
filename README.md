@@ -29,6 +29,16 @@ Here's how to get newest flags, in case this repository seems outdated compared 
 4. Delete the SVG files you've copied. No need for them anymore
 5. Check if the folder of `Twemoji_Android_Flags` has changed. If so, some flags were updated. You can optimize them using the tools I've mentioned [above](https://github.com/AndroidDeveloperLB/TwemojiFlagsVectorDrawable?tab=readme-ov-file#background) as you put them into the `library\src\main\res-flags\drawable` as VectorDrawable files. Note that sometimes the optimizations could cause issues, so make sure you see them well after having them applied.
 
+## Known issues
+I'm not sure if this issue exists on real devices, but on Android emulator API 23 , it doesn't show well the Iranian flag (the one with the lion). On API 24 it seems to be shown fine.
+
+## What about a font file instead?
+As mentioned above, I failed to find how to generate or fetch the latest one. 
+If you find how to do it easily on Windows OS, please let me know.
+There is even a python command that I've found that could make a subset-font file that has only flag emojis out of the given TTF file:
+
+    python -m fontTools.subset Twemoji.ttf --unicodes="U+0000,U+1F1E6-1F1FF" --layout-features="*" --glyph-names --output-file=Twemoji_flags.ttf
+
 ## License
 
 The library has its own license that I've set, but the Twemoji has its [own licenses](https://github.com/twitter/twemoji?tab=readme-ov-file#license). 
