@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context=".TestEmojiActivity">
+    android:layout_height="match_parent" tools:context=".activities.test_emoji.TestEmojiActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout" android:layout_width="match_parent"
@@ -15,8 +15,8 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent" android:layout_height="match_parent"
+    <androidx.core.widget.NestedScrollView android:scrollbars="vertical" android:overScrollMode="ifContentScrolls"
+        android:layout_width="match_parent" android:layout_height="match_parent" android:fadeScrollbars="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" android:id="@+id/scrollView">
 
         <LinearLayout
