@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Twemoji VectorDrawable Sample</string>
+    <string name="action_test_emoji">Test Emoji</string>
+    <string name="hint_emoji_text">Emoji Text</string>
+    <string name="btn_randomize">Randomize</string>
+    <string name="label_twemoji_result">TwemojiFlagTextView Result:</string>
+    <string name="label_font_size">Font Size</string>
+</resources>

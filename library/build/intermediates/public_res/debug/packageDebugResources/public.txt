@@ -1,0 +1,1 @@
+drawable twemoji_flag_dummy

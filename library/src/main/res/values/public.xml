@@ -1,0 +1,5 @@
+<resources>
+    <!-- Use dummy references or just an empty public to suggest hiding others -->
+    <!-- Android doesn't allow fully hiding R.drawable, but public.xml marks others as private -->
+    <public name="twemoji_flag_dummy" type="drawable" />
+</resources>

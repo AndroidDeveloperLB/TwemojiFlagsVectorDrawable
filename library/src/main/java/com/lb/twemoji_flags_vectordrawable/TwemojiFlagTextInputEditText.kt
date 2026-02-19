@@ -1,0 +1,44 @@
+package com.lb.twemoji_flags_vectordrawable
+
+import android.content.Context
+import android.text.Editable
+import android.text.Selection.setSelection
+import android.text.TextWatcher
+import android.util.AttributeSet
+import androidx.appcompat.widget.AppCompatEditText
+import com.google.android.material.textfield.TextInputEditText
+
+open class TwemojiFlagTextInputEditText : TextInputEditText {
+    @Suppress("unused")
+    constructor(context: Context) : super(context)
+
+    @Suppress("unused")
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+
+    @Suppress("unused")
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+
+    private var isProcessing = false
+
+    init {
+        addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable?) {
+                if (isProcessing || s == null) return
+
+                val size = paint.textSize.toInt()
+                val processed = TwemojiUtils.process(context, s, size)
+
+                if (processed != null) {
+                    isProcessing = true
+                    val selectionStart = selectionStart
+                    val selectionEnd = selectionEnd
+                    s.replace(0, s.length, processed)
+                    setSelection(selectionStart.coerceAtMost(s.length), selectionEnd.coerceAtMost(s.length))
+                    isProcessing = false
+                }
+            }
+        })
+    }
+}
