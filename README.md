@@ -8,7 +8,7 @@ Preview
 ![demo](https://raw.githubusercontent.com/AndroidDeveloperLB/TwemojiFlagsVectorDrawable/master/extras/animationPreview.gif)
 
 ## Background
-I wanted to have some way to use the flags of this font, as I didn't like the ones of Google that are "wavy", and other fonts seem to have some problematic licenses too. A nice bonus was also the tiny size of it, at least on the first TTF file that I've found.
+I wanted to have some way to use the flags of this font, as I didn't like the ones of Google that are "wavy", and other fonts seem to have some problematic licenses too. A nice bonus was also the tiny size of it, at least on the first TTF file that I've found, and also that they are the only ones with the Iranian flag that has the lion in it.
 
 Best I've found for this is the old [twemoji-colr](https://github.com/mozilla/twemoji-colr) and some automatically built font ([here](https://mirror.whynothugo.nl/twemoji.ttf/)), both are outdated and have some weird [digits issue](https://github.com/mozilla/twemoji-colr/issues/56) even though they should handle only emojis anyway. They also don't offer support for both new and old Android versions, as up to API 28 Android can handle only raster font properly, and only from API 29 it can handle vector font properly.
 
