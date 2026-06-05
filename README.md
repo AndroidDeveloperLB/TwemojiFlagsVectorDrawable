@@ -1,9 +1,14 @@
+
 ## Twemoji Flags VectorDrawable 
 This Android library was created due to lack of up-to-date and easy to download TTF files of Twemoji font, that I wanted to use for its flags emojis.
 It allows to use the flags emojis from there on your Android apps with ease.
 
+Preview
+--
+![demo](https://raw.githubusercontent.com/AndroidDeveloperLB/TwemojiFlagsVectorDrawable/master/extras/animationPreview.gif)
+
 ## Background
-I wanted to have some way to use the flags of this font, as I didn't like the ones of Google that are "wavy", and other fonts seem to have some problematic licenses too. A nice bonus was also the tiny size of it, at least on the first TTF file that I've found.
+I wanted to have some way to use the flags of this font, as I didn't like the ones of Google that are "wavy", and other fonts seem to have some problematic licenses too. A nice bonus was also the tiny size of it, at least on the first TTF file that I've found, and also that they are the only ones with the Iranian flag that has the lion in it.
 
 Best I've found for this is the old [twemoji-colr](https://github.com/mozilla/twemoji-colr) and some automatically built font ([here](https://mirror.whynothugo.nl/twemoji.ttf/)), both are outdated and have some weird [digits issue](https://github.com/mozilla/twemoji-colr/issues/56) even though they should handle only emojis anyway. They also don't offer support for both new and old Android versions, as up to API 28 Android can handle only raster font properly, and only from API 29 it can handle vector font properly.
 
@@ -20,6 +25,7 @@ Then, either use the `TwemojiFlagUtils.process` function to convert the text to 
 - TwemojiFlagTextInputEditText
 
 You can also check their code in case you want to create something similar.
+And, if you want to use ImageView or do something with the image itself, check out the various functions of `TwemojiFlagUtils` for your needs
 
 ## How to get up-to-date with newest flags emojis
 Here's how to get newest flags, in case this repository seems outdated compared to what's on Twemoji repository:
@@ -31,6 +37,7 @@ Here's how to get newest flags, in case this repository seems outdated compared 
 
 ## Known issues
 I'm not sure if this issue exists on real devices, but on Android emulator API 23 , it doesn't show well the Iranian flag (the one with the lion). On API 24 it seems to be shown fine.
+![issue on API 23 emualator](https://raw.githubusercontent.com/AndroidDeveloperLB/TwemojiFlagsVectorDrawable/master/extras/issue_on_api_23_emulator.png)
 
 ## What about a font file instead?
 As mentioned above, I failed to find how to generate or fetch the latest one. 
