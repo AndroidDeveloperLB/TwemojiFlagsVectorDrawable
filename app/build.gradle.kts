@@ -1,4 +1,3 @@
-import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
@@ -8,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.lb.twemoji_flags_vectordrawable_sample"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.lb.twemoji_flags_vectordrawable_sample"
         minSdk = 23
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
     }
@@ -43,9 +42,9 @@ android {
 }
 
 dependencies {
-    implementation("com.github.AndroidDeveloperLB:CommonUtils:37")
+    implementation("com.github.AndroidDeveloperLB:CommonUtils:42")
     implementation(project(":library"))
-    implementation("com.google.android.material:material:1.13.0")
+    implementation("com.google.android.material:material:1.14.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
 }
